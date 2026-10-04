@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.myjoyride.app",
+      "sha256_cert_fingerprints": [
+        "0F:BB:85:AF:23:84:7B:8B:47:FE:62:C1:A9:97:15:6F:EE:A9:B7:82:1D:DD:21:40:5F:C6:6F:48:A1:B7:C8:1C",
+        "FA:79:DF:62:11:56:6E:63:CB:84:56:C4:BA:DE:FF:D5:E4:47:0B:BC:9B:37:66:72:36:FF:D1:9C:32:32:0C:99"
+      ]
+    }
+  }
+]

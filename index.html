@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Joy Ride</title>
+<meta name="description" content="My Joy Ride : balades en moto, en auto et à vélo. Boucles Joy Ride, sorties en groupe et copilote.">
+<style>
+  :root { --bg: #f3f5f4; --fg: #1d2523; --muted: #5b6764; --accent: #0b6b4f; --accent-fg: #fff; --card: #fff; --line: #d6dcda; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #131917; --fg: #e5ebe9; --muted: #9aa8a4; --accent: #2fa37c; --accent-fg: #06130f; --card: #1b2321; --line: #2e3a37; color-scheme: dark; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 560px; margin: 0 auto; padding: 56px 20px; display: flex; flex-direction: column; gap: 20px; }
+  h1 { font-size: 2.4rem; line-height: 1.1; margin: 0; }
+  p { margin: 0; color: var(--muted); }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+  a.btn { display: inline-block; background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 700; padding: 12px 18px; border-radius: 10px; }
+  a.btn.alt { background: var(--card); color: var(--fg); border: 1px solid var(--line); }
+  footer { font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; display: flex; flex-wrap: wrap; gap: 14px; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>My Joy Ride</h1>
+  <p id="intro">Des balades en moto, en auto et à vélo : des boucles qui reviennent à ton point de départ, des sorties en groupe et un copilote pour planifier ta journée.</p>
+  <p id="beta">L'app est en test. Pour l'essayer :</p>
+  <div class="btns">
+    <a class="btn" href="https://testflight.apple.com/join/Qff9jC4G">iPhone (TestFlight)</a>
+    <a class="btn alt" href="https://play.google.com/apps/internaltest/4700750454526321825">Android</a>
+  </div>
+  <footer>
+    <a href="https://bxorvslsfevrjuppfpfa.supabase.co/functions/v1/legal/confidentialite">Confidentialité</a>
+    <a href="https://bxorvslsfevrjuppfpfa.supabase.co/functions/v1/legal/conditions">Conditions</a>
+    <a href="https://bxorvslsfevrjuppfpfa.supabase.co/functions/v1/legal/suppression">Supprimer mon compte</a>
+  </footer>
+</main>
+<script>
+  // Anglais ou espagnol selon la langue du téléphone ; français sinon.
+  (function () {
+    var l = (navigator.language || "fr").slice(0, 2);
+    var t = {
+      en: ["Motorcycle, car and bike rides: loops that bring you back to where you started, group rides and a copilot to plan your day.", "The app is in testing. To try it:"],
+      es: ["Paseos en moto, en auto y en bicicleta: rutas que vuelven a tu punto de partida, salidas en grupo y un copiloto para planear tu día.", "La app está en pruebas. Para probarla:"]
+    }[l];
+    if (!t) return;
+    document.documentElement.lang = l;
+    document.getElementById("intro").textContent = t[0];
+    document.getElementById("beta").textContent = t[1];
+  })();
+</script>
+</body>
+</html>

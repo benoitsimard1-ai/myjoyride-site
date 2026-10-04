@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["PXVSVT6JFM.com.myjoyride.app"],
+        "components": [
+          { "/": "/joinCode/*", "comment": "Rejoindre une Joy Ride avec son numéro" }
+        ]
+      }
+    ]
+  }
+}
